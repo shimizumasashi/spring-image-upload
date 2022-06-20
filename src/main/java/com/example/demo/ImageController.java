@@ -4,11 +4,11 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ImageController {
@@ -20,9 +20,9 @@ public class ImageController {
     
     /** 画像アップロード＆表示 */
     @PostMapping("/upload")
-    public ModelAndView uploadImage(
+    public String uploadImage(
             @RequestParam("file") MultipartFile file,
-            ModelAndView mv) {
+            Model model) {
 
         try {
             // ファイル名
@@ -36,7 +36,7 @@ public class ImageController {
             
             // アップロードした画像のURLを画面に渡す
             String imageUrl = "/image/" + filename;
-            mv.addObject("imageUrl", imageUrl);
+            model.addAttribute("imageUrl", imageUrl);
             
         } catch (Exception e) {
             // エラー時
@@ -44,7 +44,6 @@ public class ImageController {
         }
 
         // image.htmlを描画
-        mv.setViewName("image");
-        return mv;
+        return "image";
     }
 }
