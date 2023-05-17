@@ -3,7 +3,7 @@ Spring Bootによる画像ファイルアップロードと表示
 
 ## 準備
 
-Spring Bootプロジェクトの**直下**にstaticディレクトリを作成する必要があります。
+**Spring Bootプロジェクトの直下にstaticディレクトリを作成する必要があります。**
 今回はstatic内に更にimageディレクトリを作成。
 
 ![image](https://user-images.githubusercontent.com/47343094/174580946-7a384acf-13ab-46ed-9e07-6965b080c023.png)
