@@ -3,6 +3,7 @@ Spring Bootによる画像ファイルアップロードと表示
 
 ## 準備
 
+resoucesフォルダにあるstatic配下ファイルはSpring Bootアプリケーション再起動時に読み込まれます。
 **Spring Bootプロジェクトの直下にstaticディレクトリを作成する必要があります。**
 今回はstatic内に更にimageディレクトリを作成。
 
