@@ -58,7 +58,7 @@ public class ImageController {
             Model model) {
 
         try {
-            // ファイル名
+            // ファイル名（別名をつけても良い）
             String filename = file.getOriginalFilename();
             // 保存先パス
             String filePath = "static/image/" + filename;
